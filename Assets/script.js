@@ -10,7 +10,7 @@ function generatePassword() {
     } else {
       alert("Please select a number between 8 and 128 characters"); // this else statement only occurs if the user selects a number outside of 8 adn 128
     };
-    
+
     userPrompt1 = confirm ("Would you like your password to include LowerCase letters?"); // this confirm allows the user to select if they want lowercase letters in their password
     if (userPrompt1){
       userPrompt1 = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"]; // userPrompt1 gives the array of characters that can be selected
@@ -35,6 +35,14 @@ function generatePassword() {
       randomArray= randomArray.concat(userPrompt4);
     }
     console.log(randomArray); // this is logging the randomArray that contains all the options of characters that the user selected
+
+    let newPassword = [] // declares the new variable newPassword for the following:
+
+    for (var i=0; i<passwordLength; i++){ // if i equals 0 then i is less than the number of characters in the return from the user then i++ adds one to the characters.
+        newPassword.concat(randomArray[Math.floor(Math.random()* randomArray.length)]); //the concat adds the elements from the randomArray, the array is then converted at random then multiplied by the input the user selected as the amount of characters.
+    }
+    console.log(newPassword); // ["a", "1", "d", "4"]
+    return newPassword.join(""); // "a1d4" joins all the characters together without spaces
 }
 
 
