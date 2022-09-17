@@ -33,13 +33,14 @@ function generatePassword() {
     if (userPrompt4){
       userPrompt4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
       randomArray= randomArray.concat(userPrompt4);
-    }
+    };
+
     console.log(randomArray); // this is logging the randomArray that contains all the options of characters that the user selected
 
     let newPassword = [] // declares the new variable newPassword for the following:
 
     for (var i=0; i<passwordLength; i++){ // if i equals 0 then i is less than the number of characters in the return from the user then i++ adds one to the characters.
-        newPassword.concat(randomArray[Math.floor(Math.random()* randomArray.length)]); //the concat adds the elements from the randomArray, the array is then converted at random then multiplied by the input the user selected as the amount of characters.
+        newPassword.push(randomArray[Math.floor(Math.random()* randomArray.length)]); //the concat adds the elements from the randomArray, the array is then converted at random then multiplied by the input the user selected as the amount of characters.
     }
     console.log(newPassword); // ["a", "1", "d", "4"]
     return newPassword.join(""); // "a1d4" joins all the characters together without spaces
