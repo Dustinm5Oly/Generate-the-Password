@@ -23,13 +23,13 @@
     -Click on the Generate Password button
     -Follow the prompts to generate a random password
 
-```md
-![image] (<img src="images\Webpage Snip.jpg"></img>)
-```
 
-```md
-![webpage] (https://dustinm5oly.github.io/Generate-the-Password/)
-```
+<img src="./images\Webpage Snip.jpg"></img>
+
+
+
+[webpage](https://dustinm5oly.github.io/Generate-the-Password/)
+
 
 ## Credits
 

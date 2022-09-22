@@ -9,6 +9,7 @@ function generatePassword() {
     if (passwordLength <=128 && passwordLength >=8){ // this if statement is setting the parameters that the user can select which is between 8 and 128.
     } else {
       alert("Please select a number between 8 and 128 characters"); // this else statement only occurs if the user selects a number outside of 8 adn 128
+      return generatePassword () // return stops from running the other prompts until matched.
     };
 
     userPrompt1 = confirm ("Would you like your password to include LowerCase letters?"); // this confirm allows the user to select if they want lowercase letters in their password
@@ -58,3 +59,5 @@ function writePassword() {
     
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
